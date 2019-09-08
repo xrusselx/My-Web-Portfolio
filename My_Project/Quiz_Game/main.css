@@ -1,0 +1,38 @@
+#title {
+  text-align: center;
+  color: #86c232;
+  font-size: 60px;
+}
+#firstDiv {
+  font-size: 50px;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  border: 2px solid #6b6e70;
+  padding: 20px;
+  background-color: #474b4f;
+}
+
+body {
+    background-color: #222629 
+}
+
+#hideShow {
+  color: white
+}
+
+.radio {
+  background-color:green;
+}
+
+#start {
+  font-size: 30px;
+  padding: 10px;
+}
+/* 
+#61892f
+#86c232
+#222629
+#474b4f
+#6b6e70 
+*/

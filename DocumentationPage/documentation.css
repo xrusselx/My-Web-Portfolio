@@ -1,0 +1,161 @@
+body {
+  background-color: #2C3531;
+}
+
+
+
+#navbar {
+  box-sizing: border-box;
+  width: 15%;
+  float: left;
+  background-color: #116466;
+  border-left: 5px solid black;
+  color: #D1E8E2;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  position: fixed;
+  height: 98.5%;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
+#navCenter {
+  width: fit-content;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+#navbar a {
+  color: #D1E8E2;
+  text-decoration: none;
+  /* width: 100%;
+  border-bottom: 1px solid black; */
+}
+
+#navbar a:hover {
+  color: white;
+}
+
+.line {
+  margin-left: -3px;
+  margin-right: -3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+
+#main-doc {
+  box-sizing: border-box;
+  width: 85%;
+  float: right;
+  border-left: 5px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #D1E8E2;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+#mainDocCenter {
+  width: fit-content;
+  margin: auto;
+}
+
+
+
+.structureBorder {
+  width: 80%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.structureBorder p{
+  margin: 4px;
+}
+
+.openTag {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.closeTag {
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+tr {
+  border: 1px solid #2C3531;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+
+
+.redText {
+  margin: 3px;
+  background-color: rgb(241, 241, 241);
+  color: red;
+}
+
+
+
+@media (max-width: 1500px) {
+  #navbar {
+    width: 20%;
+    font-size: 16px;
+  }
+
+  header {
+    font-size: 13px;
+  }
+  
+  #main-doc {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  #firstImg {
+    width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;  
+  }
+
+  #navbar {
+    position: static;
+    top: 0px;
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+  }
+
+  #main-doc {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #firstImg {
+    width: 90%;
+  }
+}

@@ -1,0 +1,35 @@
+/* #movingObject0 {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+}
+
+#movingObject1 {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    top: 200px;
+    left: 0px;
+} */
+
+.ball {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(56,220, 250);
+    overflow: hidden;
+}  

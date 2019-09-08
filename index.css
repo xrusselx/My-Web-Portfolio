@@ -1,0 +1,280 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #EDF5E1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#navbar {
+  width: 100%;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  background-color: #05386B;
+  padding : 1.5em;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  transition: top 0.5s;
+}
+
+#navbar a {
+  padding : 1em;
+  font-size: 20px;
+  color: #EDF5E1;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #5CDB95;
+}
+
+#firstGreet {
+  font-size: 55px;
+}
+
+#secondGreet {
+  color: #05386B;
+  font-size: 25px;
+}
+
+
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(226, 133, 133);
+  font-size: 30px;
+  font-style: oblique;
+}
+
+
+
+#projects {
+  background-color: #5CDB95;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects h1 {
+  font-size: 40px;
+}
+
+#projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  width: 90%;
+}
+
+#projectsContainer p {
+  color: #EDF5E1;
+}
+
+.project-tile {
+  display: block;
+  cursor: pointer;
+  width: 400px;
+  height: 300px;
+  margin: 20px 30px;
+  background-color: rgb(226, 133, 133);
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 4px rgba(5, 56, 107, .5);
+}
+
+.imgProject {
+  width: inherit;
+  height: 250px;
+  transition: transform .5s;
+}
+
+.project-tile:hover {
+  background-color: #05386B;
+  opacity: .4;
+}
+
+.project-tile:hover .imgProject {
+  transform: scale(1.4);
+}
+
+
+
+#contact {
+  height: 100vh;
+  background-color: rgb(226, 133, 133);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.imgIcon {
+  vertical-align: middle;
+  width: 20px;
+}
+
+
+
+#footer {
+  background-color: #05386B;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.8);
+  color: #EDF5E1;
+  padding: .5em;
+  font-size: 18px;
+  text-align: right;
+}
+
+
+/* [class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;} */
+
+
+@media (max-height: 1050px) and (max-width: 1366px) {
+  .project-tile {
+    width: 280px;
+    height: 230px;
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #about {
+    font-size: 25px;
+  }
+  /* .project-tile {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+  } */
+}
+
+@media (max-width: 1033px)
+{
+  #navbar a {
+    font-size: 15px;
+  }
+  #firstGreet {
+    font-size: 40px;
+  }
+  #secondGreet {
+    font-size: 20px;
+  }
+  #about {
+    font-size: 18px;
+  }
+  #projects h1{
+    font-size: 30px;
+  }
+  .project-tile {
+    width: 250px;
+    height: 200px;
+  }
+  #contact h1 {
+    font-size: 25px;
+  }
+  #footer {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px)
+{
+  #navbar {
+    text-align: center;
+    padding : 1em;  
+  }
+  #navbar a {
+    font-size: 12px;
+  }
+  #firstGreet {
+    font-size: 25px;
+  }
+  #secondGreet {
+    font-size: 14px;
+  }
+  #about {
+    align-items: flex-start;
+    font-size: 15px;
+    padding: 10px;
+  }
+  #about h1 {
+    font-size: 15px;
+    font-weight: normal;
+  }
+  #about h1::before {
+    content: "• ";
+    /* display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;  */
+  }
+  #about p::before {
+    content: "• ";
+  }
+
+  #projects {
+    height: auto;
+  }
+  #projectsContainer {
+    display: block;
+    width: auto;
+  }
+  #projects h1{
+    font-size: 18px;
+    padding-top: 60px;
+  }
+  .project-tile {
+    width: 220px;
+    height: 170px;
+  }
+  #footer {
+    font-size: 12px;
+  }
+  #contact h1 {
+    padding: 10px;
+    font-size: 22px;
+  }
+  #contactsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

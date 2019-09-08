@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Online Calculator</title>
+
+<script src="calcu.js"></script>
+<link rel="icon" type="image/png" href="cross.png">
+<!-- <link rel="stylesheet" type="text/css" href="cal.css"> -->
+<style>
+body {
+    background-image:url(galaxy.jpg); 
+    /* background-color: RGB(100, 200, 100); */
+    background-repeat: no-repeat;
+}
+/* div {
+    position: relative;
+    animation-name: sample;
+    animation-duration: 3s;
+    text-align: center;
+} */
+
+#calcuCase {
+  width: fit-content;
+  margin: auto;
+}
+
+/* @keyframes sample {
+    0% {left: 0px; top: 0px;}
+    25% {left: 200px; top: 0px;}
+    50% {left: 200px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px;}
+} */
+
+.calcuButton {
+  background-color: transparent; 
+  font-size:40px; 
+  height:55px;
+  width:55px;
+  cursor: pointer;
+  color: silver;
+}
+button:hover {
+    color: black;
+    background-color: silver;
+    /* RGB(122,244,126); */
+}
+
+#title {
+    font-size:45px;
+    color: silver;
+    text-align: center; 
+    background-image:url(galaxy.jpg);
+    background-color: bubble;
+    background-repeat: repeat-y;
+    height: 70px; width: 100%
+}
+
+#display {
+    border: 3px solid black;
+    background-color: white;
+    font-size:45px;
+    text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+  <h1 id="title">ONLINE CALCULATOR</h1>
+  <div id="calcuCase">
+    <p id="display">0</p>
+
+    <button class="calcuButton" type="button" onclick="one()">1</button>
+
+    <button class="calcuButton" type="button" onclick="two()">2</button>
+
+    <button class="calcuButton" type="button" onclick="three()">3</button> 
+
+    <button class="calcuButton" type="button" onclick="div()">/</button> <br>
+
+    <button class="calcuButton" type="button" onclick="four()">4</button>
+
+    <button class="calcuButton" type="button" onclick="five()">5</button>
+
+    <button class="calcuButton" type="button" onclick="six()">6</button>
+
+    <button class="calcuButton" type="button" onclick="times()">*</button> <br>
+
+    <button class="calcuButton" type="button" onclick="seven()">7</button>
+
+    <button class="calcuButton" type="button" onclick="eight()">8</button>
+
+    <button class="calcuButton" type="button" onclick="nine()">9</button>
+
+    <button class="calcuButton" type="button" onclick="subtract()">-</button> <br>
+
+    <button class="calcuButton" type="button" onclick="zero()">0</button>
+
+    <button class="calcuButton" type="button" onclick="clr()">C</button>
+
+    <button class="calcuButton" type="button" onclick="equal()">=</button>
+
+    <button class="calcuButton" type="button" onclick="plus()">+</button> <br>
+
+    <!-- <button class="calcuButton" type="button" onclick="sample()">s</button> -->
+  </div>
+
+</body>
+</html> 

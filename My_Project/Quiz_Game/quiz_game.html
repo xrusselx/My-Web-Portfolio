@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Quiz Game</title>
+    <style>
+      #title {
+      text-align: center;
+      color: #86c232;
+      font-size: 60px;
+      }
+      #firstDiv {
+      font-size: 30px;
+      margin: auto;
+      width: 80%;
+      height: 100%;
+      border: 2px solid #6b6e70;
+      padding: 20px;
+      background-color: #474b4f;
+      }  
+
+      body {
+        background-color: #222629 
+      }
+
+      #hideShow {
+        color: white
+      }
+
+      .radio {
+        background-color:green;
+      }
+
+      #start {
+        font-size: 30px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      /* 
+      #61892f
+      #86c232
+      #222629
+      #474b4f
+      #6b6e70 
+      */
+    </style>
+</head>
+<body>
+    <h1 id="title">WELCOME TO QUIZ GAME!</h1>
+    <div id="firstDiv">
+        <div id="hideShow" hidden>
+        <h4 id="question"></h4>
+        <label>
+        <input class="radio" id="a" type="radio" name="answer" value=""><span id="a1"></span><br>
+        <input class="radio" id="b" type="radio" name="answer" value=""><span id="b1"></span><br>
+        <input class="radio" id="c" type="radio" name="answer" value=""><span id="c1"></span><br>
+        <input class="radio" id="d" type="radio" name="answer" value=""><span id="d1"></span><br>
+        </div>
+        <button id="start" onclick="start()">START</button>
+
+</body>
+<script src="main.js"></script>
+</html>

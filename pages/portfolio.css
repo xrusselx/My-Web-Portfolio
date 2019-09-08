@@ -1,0 +1,205 @@
+
+.bg {
+  width: 1900px;
+  height: 1020px;
+  text-align: center;
+  font-size: 50px;
+  color: silver;
+  position: absolute;
+  top: 1020px;
+  left: 0px;
+}
+
+.gradient {
+  width: 1900px;
+  height: 2px;
+  position: absolute;
+  top: 1019px;
+  background: repeating-linear-gradient(180deg, black 0px, silver 1px, black 2px);
+  z-index: 1;
+}
+
+.tabsContainer {
+  background-color: transparent;
+  display: flex;
+  /* width: fit-content; */
+  /* height: .8em; */
+  border: 1px solid;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.tabsContainer button {
+  background-color: transparent;
+  border: none;
+  color: silver;
+  padding: .8em;
+
+  /* width: 8em; */
+  cursor: pointer;
+}
+.tabsContainer button:hover {
+  color: black;
+  background-color: silver;
+}
+#tab1 {
+  order: 1;
+}
+#tab2 {
+  order: 2;
+}
+#tab3 {
+  order: 3;
+}
+
+.moon {
+  position: absolute;
+  top: 170px;
+  left: 170px;
+  height: 100px;
+  width: 100px;
+
+  background-color: transparent;
+  border-radius: 60%;
+  box-shadow: 25px 10px 0 0 silver;
+
+  animation-name: rotateMoon;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.heart {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  height: 50px;
+  width: 50px;
+  background-color: silver;
+  transform: rotate(45deg);
+
+  animation-name: rotateHeart;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateHeart {
+  50% {
+    transform: rotate(225deg) scale(0.4);
+  }
+  100% {
+    transform:  rotate(405deg) scale(1);
+  }
+}
+
+@keyframes rotateMoon {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: silver;
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: silver;
+}
+
+#firstBg {
+  animation-name: changeSize;
+  animation-duration: 2s;
+  top: 0px;
+  background:url(../images/universe3.jpg);
+  background-size: 100% 100%;
+}
+
+/* @keyframes changeSize {
+  25% {
+    width: 50%;
+    height: 510px;
+  }
+  50% {
+    width: 25%;
+    height: 255px;
+  }
+  75% {
+    width: 50%;
+    height: 510px;
+  }
+  100% {
+    width: 100%;
+    height: 1020px;
+  }
+} */
+
+#secondBg {
+  background:url(../images/galaxy1.jpg);
+  background-size: 100% 100%;
+}
+
+#thirdBg {
+  background:url(../images/stars1.jpg);
+  background-size: 100% 100%;
+}
+
+#fourthBg {
+  background:url(../images/solarSystem2.jpg);
+  background-size: 100% 100%; 
+}
+
+#fifthBg {
+  background:url(../images/earth4.jpg);
+  background-size: 100% 100%;
+}
+
+#sixthBg {
+  background:url(../images/earth2.jpg);
+  background-size: 100% 100%;
+}
+
+#seventhBg {
+  background:url(../images/philFlag1.jpg);
+  background-size: 100% 100%;
+} 
+
+@media (max-width: 520px) {
+  .bg {
+    top: 100vh;
+    font-size: 20px;
+    width: 100vw;
+    height: 100vh;
+  }
+  .gradient {
+    width: 100vw;
+    top: 99.48vh;
+  }
+}
+
+@media (min-width: 1921px) {
+  .bg {
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+  }
+  .gradient {
+    top: 99.48vh;
+    width: 100vw;
+  }
+}

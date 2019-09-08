@@ -1,0 +1,46 @@
+body {
+  /* margin: 0; */
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+#main {
+  background-color: rgb(201, 200, 200);
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+#title {
+  padding-top: 1em;
+}
+
+#img-div {
+  background-color: rgb(73, 71, 71);
+  padding-top: 1em;
+  width: 99%;
+  display: block;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: silver;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  text-align: start;
+  width: 40%;
+  margin: auto;
+}
+

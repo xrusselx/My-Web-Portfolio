@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- <link rel="stylesheet" href="survey.css"> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+    <script src="survey.js" defer></script>
+    <title>Survey Form</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 1%;
+        background-color: rgb(139, 182, 219);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        overflow-y: scroll;
+      }
+      
+      option:first-child{
+        display: none;
+      }
+      
+      #main {
+        margin: 1%;
+        padding: 1%;
+        background-color: white;
+        font-size: 20px;
+      }
+
+      .box {
+        background-color: rgb(250, 246, 246);
+        padding: .5em;
+        width: 170px;
+      }
+
+      #dropdown {
+        height: 35px;
+      }
+
+      #submit {
+        padding: .5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: rgb(141, 224, 159);
+        color: rgb(68, 59, 59);
+      }
+
+      textarea {
+        background-color: rgb(250, 246, 246);
+        padding: 0.5em;
+        height: 40px;
+        width: 45%;
+      }
+
+      .bookContainer {
+        display: flex;
+        /* border: 1px solid black; */
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid black; */
+      }
+
+      .question {
+        margin: 0%;
+        margin-right: 2%;
+        width: 40%;
+        text-align: end;
+        /* border: 1px solid black; */
+      }
+
+      .answer {
+        text-align: start;
+        padding-right: 10px;
+        width: fit-content;
+        /* border: 1px solid black; */
+      }
+
+      @media (max-width: 534px) {
+        #main {
+          font-size: 11px;
+        }
+        .box {
+          width: 45%;
+        }
+        .bookContainer {
+          flex-direction: column;
+        }
+      }
+    </style>
+<head></head>
+</head>
+<body>
+  <h1 id="title">Bible Reading Survey Form</h1>
+  <div id="main">
+
+    <p id="description">This survey aims to know the number of people who read their Bible</p><br>
+
+    <form id="survey-form" action="/action_page.php">
+      
+      <div class="container">
+        <label class="question" for="name" id="name-label">* Name: </label>
+        <input type="text" class="box" id="name" placeholder="Enter your name" required>
+      </div><br>
+      <div class="container">
+        <label class="question" for="email" id="email-label">* E-mail: </label>
+        <input type="email" class="box" id="email" placeholder="Enter your email address" required>
+      </div><br>
+      <div class="container">
+        <label class="question" for="number" id="number-label">* Number: </label>
+        <input type="number" min="9000000000" max="999999999999" class="box" id="number" placeholder="Enter your phone number" required>
+      </div><br>
+
+      <div class="container">
+        <p class="question">Which of the four Gospel do you like most?</p>
+        <select class="box" id="dropdown">
+          <option id="firstOption">Please Select</option>
+          <option value="matthew">Matthew</option>
+          <option value="mark">Mark</option>
+          <option value="luke">Luke</option>
+          <option value="john">John</option>
+        </select>
+      </div><br>
+
+
+      <div class="container">
+        <p class="question">Which Testament do you prefer?</p>
+        <div class="answer">
+          <input type="radio" name="testament" value="old">
+          <label for="testament">Old Testament</label><br>
+          <input type="radio" name="testament" value="new">
+          <label for="testament">New Testament</label><br><br>
+        </div>
+      </div><br>
+
+
+      <div class="container">
+        <p class="question">Which is/are your favorite New Testament book(s)?</p>
+
+        <div class="bookContainer">
+          <div class="answer" id="books">
+            <input type="checkbox" name="book1" value="matthew">
+            <label for="book">Matthew</label><br>
+            <input type="checkbox" name="book2" value="mark">
+            <label for="book">Mark</label><br>
+            <input type="checkbox" name="book3" value="luke">
+            <label for="book">Luke</label><br>
+            <input type="checkbox" name="book4" value="john">
+            <label for="book">John</label><br>
+            <input type="checkbox" name="book5" value="acts">
+            <label for="book">Acts</label><br>
+            <input type="checkbox" name="book6" value="romans">
+            <label for="book">Romans</label><br>
+            <input type="checkbox" name="book7" value="1corinthians">
+            <label for="book">1 Corinthians</label><br>
+            <input type="checkbox" name="book8" value="2corinthians">
+            <label for="book">2 Corinthians</label><br>
+            <input type="checkbox" name="book9" value="galatians">
+            <label for="book">Galatians</label><br>
+            <input type="checkbox" name="book10" value="ephesians">
+            <label for="book">Ephesians</label><br>
+            <input type="checkbox" name="book11" value="philippians">
+            <label for="book">Philippians</label><br>
+            <input type="checkbox" name="book12" value="colosians">
+            <label for="book">Colosians</label><br>
+            <input type="checkbox" name="book13" value="1tesalonians">
+            <label for="book">1 Tesalonians</label><br>
+            <input type="checkbox" name="book14" value="2tesalonians">
+            <label for="book">2 Tesalonians</label><br>
+          </div>
+
+          <div class="answer">
+            <input type="checkbox" name="book15" value="1timothy">
+            <label for="book">1 Timothy</label><br>
+            <input type="checkbox" name="book16" value="2timothy">
+            <label for="book">2 Timothy</label><br>
+            <input type="checkbox" name="book17" value="titus">
+            <label for="book">Titus</label><br>
+            <input type="checkbox" name="book18" value="philemon">
+            <label for="book">Philemon</label><br>
+            <input type="checkbox" name="book19" value="hebrews">
+            <label for="book">Hebrews</label><br>
+            <input type="checkbox" name="book20" value="james">
+            <label for="book">James</label><br>    
+            <input type="checkbox" name="book21" value="1peter">
+            <label for="book">1 Peter</label><br>
+            <input type="checkbox" name="book22" value="2peter">
+            <label for="book">2 Peter</label><br>
+            <input type="checkbox" name="book23" value="1john">
+            <label for="book">1 John</label><br>
+            <input type="checkbox" name="book24" value="2john">
+            <label for="book">2 John</label><br>
+            <input type="checkbox" name="book25" value="3john">
+            <label for="book">3 John</label><br>
+            <input type="checkbox" name="book26" value="jude">
+            <label for="book">Jude</label><br>
+            <input type="checkbox" name="book27" value="revelation">
+            <label for="book">Revelation</label><br>
+          </div>
+        </div>
+      </div><br>
+
+
+      <div class="container">
+        <p class="question">How Reading the Bible change your life?</p>
+        <textarea rows="1" cols="45" placeholder="Please tell your answer here..."></textarea><br><br>
+      </div><br>
+
+      <input id="submit" type="submit" value="Submit">
+
+    </form>
+  </div>  
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="product.css">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+  <title>Bible Products</title>
+
+  <style>
+    body {
+      background-color: rgb(220, 224, 224);
+      margin-top: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      /* border: 1px solid black; */
+    }
+
+    #header {
+      display: flex;
+      height: 70px;
+      justify-content: space-between;
+      background-color: rgb(220, 224, 224);
+      align-items: center;
+      position: sticky;
+      top: 0px;
+      z-index: 6;
+      /* border: 1px solid black; */
+    }
+
+    #header-img {
+      max-height: 100%;
+      width: 200px;
+      /* max-width: 60%; */
+    }
+
+    #nav-bar {
+      display: flex;
+      height: 55%;
+      align-items: center;
+    }
+
+    .nav-link {
+      margin-left: 1em;
+      margin-right: 1em;
+      font-size: 1.2em;
+      color: black;
+    }
+
+    a:hover {
+      border-bottom: 1px solid gray;
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #formContainer {
+      flex-direction: column;
+      background-color: powderblue;
+      padding-top: 5em;
+      padding-bottom: 2px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      /* border: 1px solid black; */
+    }
+
+    #email {
+      padding: 4px;
+    }
+
+    input {
+      margin: 0;
+    }
+
+    #submit {
+      background-color: rgb(220, 224, 224);
+    }
+
+    .spacing {
+      height: 100px;
+    }
+
+    #features {
+      background-color:  rgb(137, 206, 228);
+      padding-top: 5em;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    #design {
+      flex-direction: column;
+      background-color: rgb(132, 191, 247);
+      padding-top: 4em;
+      padding-bottom: 2px;
+      align-items: center;
+    }
+
+    #shippingFee {
+      flex-direction: column;
+      text-align: center;
+      background-color: rgb(102, 173, 240);
+      padding-top: 4em;
+      padding-bottom: 4em;
+    }
+
+    #fees {
+      padding-left: 15%;
+      padding-right: 15%;
+      justify-content: space-around;
+    }
+
+    .fee {
+      border: 1px solid black;
+      background-color: rgb(197, 197, 197);
+      padding-bottom: 4px;
+      height: 125px;
+      width: 20%;
+    }
+
+    .fee h3 {
+      background-color: rgb(168, 168, 168);
+      margin-top: 0px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      font-size: 16px;
+    }
+
+    .fee button {
+      background-color: rgb(102, 173, 240);
+      padding-left: 8px;
+      padding-right: 8px;
+      font-size: 14px;
+    }
+
+    #footer {
+      display: flex;
+      height: 80px;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background-color: rgb(190, 190, 190);
+      text-align: right;
+    }
+
+    #foot p {
+      margin-top: 0;
+      margin-right: 1em;
+    }
+
+    #foot a {
+      margin-right: 1em;
+      font-size: 1.1em;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      #header {
+        height: 50px;
+      }
+
+      #header-img {
+        width: 25%;
+      }
+      
+      #nav-bar {
+        font-size: 12px;
+      }
+
+      iframe {
+        width: 280px;
+        height: 170px;
+      }
+
+      #fees {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .fee {
+        margin: 5px;
+        width: 200px;
+      }
+
+      #footer {
+        height: 50px;
+        font-size: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fee {
+        width: 30%;
+      }
+    }
+
+    /* @media (min-width: 1200px)  and (min-height: 1004px) { */
+    @media (min-width: 1200px) {
+
+      #formContainer {
+        position: sticky;
+        top: -20px;
+        z-index: 5;
+      }
+
+      #features {
+        position: sticky;
+        top: 110px;
+        z-index: 4;
+      }
+
+      #design {
+        position: sticky;
+        top: 360px;
+        z-index: 3;
+      }
+
+      #shippingFee {
+        position: sticky;
+        top: 660px;
+        z-index: 2;
+      }
+
+      #footer {
+        position: sticky;
+        top: 420px;
+        z-index: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <img id="header-img" src="pbs.png" alt="Philippine Bible Society">
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#design">Design</a>
+      <a class="nav-link" href="#shippingFee">Pricing</a>
+    </nav>
+  </header>
+
+  <div class="container" id="formContainer">
+    <h1>The Word is for every Filipino, the Word is for the world!</h1>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <label for="email"></label>
+      <input id="email" name="email" type="email" placeholder="Enter your email address" required><br><br>
+      <input id="submit" type="submit" value="Get Started">
+    </form>
+  </div>
+
+  <div class="spacing" style="background-color: powderblue"></div>
+
+  <div class="container" id="features">
+    <div>
+      <h3>Free Bible</h3>
+      <p>We believe that the Bible is the Word of God that He freely given to us 
+        and should be freely distributed and be read by all men.</p>
+      <h3>Variety Of Choice</h3>
+      <p>You can choose any Bible from different translation, design and size that fits to you. 
+        Young or old, girl or boy the Word of God is for you.</p>
+      <h3>Quality Assurance</h3>
+      <p>The Bible is worthy to be made from the most durable materials
+        and you are rest assured that the Bible you read has no damage or fault.</p>
+    </div>
+  </div>
+
+  <div class="spacing" style="background-color: rgb(137, 206, 228)"></div>
+
+  <div class="container" id="design">
+    <h3>You can chose your Bible now from different version and different sizes.</h3>
+    <iframe id="video" width="460" height="255" src="https://www.youtube-nocookie.com/embed/tF_MzMW4PvU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="spacing" style="background-color: rgb(132, 191, 247)"></div>
+
+  <div class="container" id="shippingFee">
+    <h3>Shipping fee depends on the place of delivery</h3>
+    <div class="container" id="fees">
+      <div class="fee">
+        <h3 id="feeNear">Around Central Luzon</h3>
+        <h2>₱100.00</h2>
+        <button>Select</button>
+      </div>
+      <div class="fee">
+        <h3 id="feeCountry">Around the country</h3>
+        <h2>₱500.00</h2>
+        <button>Select</button>
+      </div>
+      <div class="fee">
+        <h3 id="feeInternational">International</h3>
+        <h2>₱1000.00</h2>
+        <button>Select</button>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div id="foot">
+      <nav>
+        <a href="#header">Privacy</a>
+        <a href="#header">Terms</a>
+        <a href="#header">Contact</a>
+      </nav>
+      <p>Copyright 2019, PBS</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async></script>
+    <link rel="stylesheet" href="documentation.css">
+    <title>Technical Documentation</title>
+
+    <style>
+      body {
+        background-color: #2C3531;
+      }
+
+
+
+      #navbar {
+        box-sizing: border-box;
+        width: 15%;
+        float: left;
+        background-color: #116466;
+        border-left: 5px solid black;
+        color: #D1E8E2;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 10px;
+        position: fixed;
+        height: 98.5%;
+        margin-bottom: 8px;
+        padding: 4px;
+      }
+
+      #navCenter {
+        width: fit-content;
+        margin: auto;
+        /* border: 1px solid black; */
+      }
+
+      #navbar a {
+        color: #D1E8E2;
+        text-decoration: none;
+        /* width: 100%;
+        border-bottom: 1px solid black; */
+      }
+
+      #navbar a:hover {
+        color: white;
+      }
+
+      .line {
+        margin-left: -3px;
+        margin-right: -3px;
+        padding-left: 3px;
+        padding-right: 3px;
+        border: 0;
+        border-top: 1px solid black;
+      }
+
+
+      #main-doc {
+        box-sizing: border-box;
+        width: 85%;
+        float: right;
+        border-left: 5px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: #D1E8E2;
+        margin-bottom: 8px;
+        padding: 10px;
+      }
+
+      #mainDocCenter {
+        width: fit-content;
+        margin: auto;
+      }
+
+
+
+      .structureBorder {
+        width: 80%;
+        border: 1px solid black;
+        margin: auto;
+      }
+
+      .structureBorder p{
+        margin: 4px;
+      }
+
+      .openTag {
+        margin-top: 4px;
+        margin-left: 4px;
+      }
+
+      .closeTag {
+        margin-bottom: 4px;
+        margin-left: 4px;
+      }
+
+
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+      }
+
+      tr {
+        border: 1px solid #2C3531;
+      }
+
+      td, th {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: white;
+      }
+
+
+
+      .redText {
+        margin: 3px;
+        background-color: rgb(241, 241, 241);
+        color: red;
+      }
+
+
+
+      @media (max-width: 1500px) {
+        #navbar {
+          width: 20%;
+          font-size: 16px;
+        }
+
+        header {
+          font-size: 13px;
+        }
+        
+        #main-doc {
+          width: 80%;
+          font-size: 16px;
+        }
+
+        #firstImg {
+          width: 550px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          display: flex;
+          flex-direction: column;  
+        }
+
+        #navbar {
+          position: static;
+          top: 0px;
+          width: 100%;
+          height: 200px;
+          overflow: scroll;
+        }
+
+        #main-doc {
+          width: 100%;
+          padding: 20px;
+        }
+
+        #firstImg {
+          width: 90%;
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="navCenter">
+      <header>
+        <h1 style="margin-bottom: 0; margin-top: 10px">HTML</h1>
+        <h1 style="margin: 0 -3px; padding: 0 3px; margin-bottom: 20px; padding-bottom: 1em; border-bottom: 2px solid black">Documentation</h1>
+      </header>
+      <a class="nav-link" href="#What_is_HTML">What is HTML</a><hr class="line" class="line">
+      <a class="nav-link" href="#HTML_Sample">HTML Sample</a><hr class="line">
+      <a class="nav-link" href="#Tags">Tags</a><hr class="line">
+      <a class="nav-link" href="#Web_Browsers">Web Browsers</a><hr class="line">
+      <a class="nav-link" href="#Page_Structure">Page Structure</a><hr class="line">
+      <a class="nav-link" href="#The_&lt!DOCTYPE&gt_Declaration">The &lt!DOCTYPE&gt Declaration</a><hr class="line">
+      <a class="nav-link" href="#HTML_Versions">HTML Versions</a><hr class="line">
+      <a class="nav-link" href="#Reference">Reference</a><br>
+    </div>
+  </nav>
+
+  <main id="main-doc">
+    <div id="mainDocCenter">
+    <section class="main-section" id="What_is_HTML">
+      <header><h1 style="padding-top: 1em;">What is HTML</h1></header>
+      <p>HTML is the standard markup language for creating Web pages.</p>
+      <ul>
+        <li>HTML stands for Hyper Text Markup Language</li>
+        <li>HTML describes the structure of a Web page</li>
+        <li>HTML consists of a series of elements</li>
+        <li>HTML elements tell the browser how to display the content</li>
+        <li>HTML elements are represented by tags</li>
+        <li>HTML tags label pieces of content such as "heading", "paragraph", "table", and so on</li>
+        <li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
+      </ul>
+    </section><br>
+    
+    <section class="main-section" id="HTML_Sample">
+      <header><h1>HTML Sample</h1></header>
+      <p>A Simple HTML Document:</p>
+      <pre><code>
+  &lt!DOCTYPE html&gt
+  &lthtml&gt
+  &lthead&gt
+  &lttitle&gtPage Title&lt/title&gt
+  &lt/head&gt
+  &ltbody&gt
+
+  &lth1&gtMy First Heading&lt/h1&gt
+  &ltp&gtMy first paragraph.&lt/p&gt
+
+  &lt/body&gt
+  &lt/html&gt
+      </code></pre>
+      <p>Example Explained</p>
+      <ul>
+        <li>The <span class="redText"><code>&lt!DOCTYPE html&gt</code></span> declaration defines this document to be HTML5</li>
+        <li>The <span class="redText"><code>&lthtml&gt</code></span> element is the root element of an HTML page</li>
+        <li>The <span class="redText"><code>&lthead&gt</code></span> element contains meta information about the document</li>
+        <li>The <span class="redText"><code>&lttitle&gt</code></span> element specifies a title for the document</li>
+        <li>The <span class="redText"><code>&ltbody&gt</code></span> element contains the visible page content</li>
+        <li>The <span class="redText"><code>&lth1&gt</code></span> element defines a large heading</li>
+        <li>The <span class="redText"><code>&ltp&gt</code></span> element defines a paragraph</li>
+      </ul>
+    </section><br>
+    
+    <section class="main-section" id="Tags">
+      <header><h1>Tags</h1></header>
+      <p>HTML tags are element names surrounded by angle brackets:</p>
+      <p>&lttagname&gtcontent goes here...&lt/tagname&gt</p>
+      <ul>
+        <li>HTML tags normally come in pairs like &ltp&gt and &lt/p&gt</li> 
+        <li>The first tag in a pair is the start tag, the second tag is the end tag</li>
+        <li>The end tag is written like the start tag, but with a forward slash inserted before the tag name</li>
+      </ul>
+      <p>Tip: The start tag is also called the opening tag, and the end tag the closing tag.</p>
+    </section><br>
+
+    <section class="main-section" id="Web_Browsers">
+      <header><h1>Web Browsers</h1></header>
+      <p>The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them.</p>
+      <p>The browser does not display the HTML tags, but uses them to determine how to display the document:</p>
+      <img id="firstImg" src="browserView.png" alt="Browser View">
+    </section><br>
+    
+    <section class="main-section" id="Page_Structure">
+      <header><h1>Page Structure</h1></header>
+      <p>Below is a visualization of an HTML page structure:</p>
+      <div style="background-color: #FFCB9A; width: 90%; border: 1px solid black;">
+        <p class="openTag">&lthtml&gt</p>
+        <div class="structureBorder">
+          <p class="openTag">&lthead&gt</p>
+          <div class="structureBorder">
+            <p>&lttitle&gtPage title&lt/title&gt</p>
+          </div>
+          <p class="closeTag">&lt/head&gt</p>
+        </div><br>
+        <div class="structureBorder">
+          <p class="openTag">&ltbody&gt</p>
+          <div class="structureBorder" style="background-color: white;">
+            <br>
+            <div class="structureBorder">
+              <p>&lth1&gtThis is a heading&lt/h1&gt</p>
+            </div><br>
+            <div class="structureBorder">
+              <p>&ltp&gtThis is a paragraph&lt/p&gt</p>
+            </div><br>
+            <div class="structureBorder">
+                <p>&ltp&gtThis is another paragraph&lt/p&gt</p>
+            </div><br>
+          </div>
+          <p class="closeTag">&lt/body&gt</p>
+        </div>
+        <p class="closeTag">&lt/html&gt</p>
+      </div>
+      <p>Note: Only the content inside the &ltbody&gt section (the white area above) is displayed in a browser.</p>
+    </section><br>
+
+    <section class="main-section" id="The_&lt!DOCTYPE&gt_Declaration">
+      <header><h1>The &lt!DOCTYPE&gt Declaration</h1></header>
+      <p>The &lt!DOCTYPE&gt declaration represents the document type, and helps browsers to display web pages correctly.</p>
+      <p>It must only appear once, at the top of the page (before any HTML tags).</p>
+      <p>The &lt!DOCTYPE&gt declaration is not case sensitive.</p>
+      <p>The &lt!DOCTYPE&gt declaration for HTML5 is:</p>
+      <p><span class="redText" style="background-color: rgb(211, 195, 195)"><code>&lt!DOCTYPE html&gt</code></span></p>
+    </section><br>
+
+    <section class="main-section" id="HTML_Versions">
+      <header><h1>HTML Versions</h1></header>
+      <p>Since the early days of the web, there have been many versions of HTML:</p>
+      <table>
+        <tr>
+          <th>Versions</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>1991</td>
+        </tr>
+        <tr>
+          <td>HTML 2.0</td>
+          <td>1995</td>
+        </tr>
+        <tr>
+          <td>HTML 3.2</td>
+          <td>1997</td>
+        </tr>
+        <tr>
+          <td>HTML 4.01</td>
+          <td>1999</td>
+        </tr>
+        <tr>
+          <td>XHTML</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>HTML5</td>
+          <td>2014</td>
+        </tr>
+      </table>
+    </section><br>
+
+    <section class="main-section" id="Reference">
+      <header><h1>Reference</h1></header>
+      <ul>
+        <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3Schools</a></li>
+      </ul>
+    </section>
+    </div>
+  </main>
+
+</body>
+</html>

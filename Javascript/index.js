@@ -46,9 +46,25 @@ function updateRecords(id, prop, value) {
   //   collection[id].prop = value;
   // }
   console.log(typeof collection[2548].tracks);
-  console.log(typeof arr);
   return collection;
 }
 
 // Alter values below to test your code
 updateRecords(5439, "artist", "ABBA");
+
+
+// Template Literal
+console.log(`Jesus Jesus Jesus
+Friend Forever!`)
+
+// Open your browser console
+let outputTwo = "This will print to the browser console 2 times";
+// Use console.log() to print the outputTwo variable
+console.log(outputTwo);
+
+let outputOne = "Try to get this to log only once to the browser console";
+// Use console.clear() in the next line to print the outputOne only once
+console.clear()
+
+// Use console.log() to print the outputOne variable
+console.log(outputOne);

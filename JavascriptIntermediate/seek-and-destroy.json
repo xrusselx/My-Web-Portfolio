@@ -1,0 +1,3 @@
+{
+  "index.js": "function destroyer(...arr) {\n  // Remove all the values\n  let newArr = [];\n  for (let i = 1; i <= arr.length - 1; i++) {\n    for (let j = 0; j <= arr[0].length - 1; j++) {\n      console.log(j);\n      if (arr[i] == arr[0][j]) {\n        arr[0].splice(j, 1);\n        j--;\n      }\n    }\n  }\n  newArr = arr[0].slice();\n  return newArr;\n}\n"
+}

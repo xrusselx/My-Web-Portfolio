@@ -1,0 +1,17 @@
+function fearNotLetter(str) {
+  // if(str.charCodeAt(str.length - 1) - str.charCodeAt(0) + 1 == str.length) {
+  //   return undefined;
+  // }
+  let letterInAscii = str.charCodeAt(0);
+  for (let i = 0; i <= str.length - 1; i++) {
+    if (letterInAscii != str.charCodeAt(i)) {
+      return String.fromCharCode(letterInAscii);
+    }
+    else if (letterInAscii == str.charCodeAt(str.length - 1)) {
+      return undefined;
+    }
+    letterInAscii++;
+  }
+}
+
+fearNotLetter("abce");

@@ -1,0 +1,27 @@
+function pairElement(str) {
+  let result = [];
+  for (let element of str) {
+    let pairedElement = [];
+    pairedElement.push(element);
+    if (element == 'C') {
+      pairedElement.push('G');
+      result.push(pairedElement);
+    }
+    else if (element == 'G') {
+      pairedElement.push('C');
+      result.push(pairedElement);
+    }
+    else if (element == 'T') {
+      pairedElement.push('A');
+      result.push(pairedElement);
+    }
+    else if (element == 'A') {
+      pairedElement.push('T');
+      result.push(pairedElement);
+    }
+    console.log(result);
+  }
+  return result;
+}
+
+pairElement("GCG");

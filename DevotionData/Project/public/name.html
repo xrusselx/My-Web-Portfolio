@@ -7,11 +7,54 @@
 
   <title>Document</title>
   <script src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <h1>hai</h1>
+  <div id="result"></div>
+  <p id="numberOfClick"></p>
+
+  <button onclick="clickCounter()">Click Me</button>
+  <button onclick="startCounter()" id="hiddenButton">Start Counter</button>
+  <button onclick="showClickedData()" id="hiddenButton">Show Data</button>
+  <br /><br />
+
+  <script>
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+      // Store
+      localStorage.setItem("lastname", "Smith");
+      // Retrieve
+      document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+    } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+  </script>
+
   <label for="devotionText">Devotion:
     <input type="text" name="devotionText"></label>
   <a href="sname.html">go to other page.</a>
 </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+
+<button>Click Me</button>
+
+<script>
+  // Check browser support
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+</script>
+
+</body>
+</html> -->

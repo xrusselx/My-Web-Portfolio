@@ -21,10 +21,10 @@
             // $sql = 'SELECT * FROM `Daily Record`';
             // $sql = 'UPDATE `Daily Record` SET `id`="2" WHERE `id`="9"';
             // $sql = 'DELETE FROM `Daily Record` WHERE id=15';
-            $sql = 'INSERT INTO `Daily Record` SET
-            `devotiontoday` = "1",
-            `devotionsummarize` = "Russel",
-            `devotiondate` = "2020-01-26"';
+            // $sql = 'INSERT INTO `Daily Record` SET
+            // `devotiontoday` = "1",
+            // `devotionsummarize` = "Russel",
+            // `devotiondate` = "2020-01-26"';
             // // $sql = 'SELECT `devotionsummarize` FROM `Daily Record`';
 
             // $out = $pdo->exec($sql);

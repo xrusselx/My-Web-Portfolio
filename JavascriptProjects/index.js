@@ -20,7 +20,7 @@ function clickCounter() {
                         Number(localStorage.getItem("numberOfClicks")) + 1);
 }
 
-function restartCounter() {
+function startCounter() {
   localStorage.setItem("numberOfClicks", a);
 }
 

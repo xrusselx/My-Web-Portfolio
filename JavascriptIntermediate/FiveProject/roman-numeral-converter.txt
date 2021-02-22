@@ -1,0 +1,49 @@
+function convertToRoman(val) {
+  // val =  document.getElementById('numberField').value;
+  let i = 1;
+  return val.toString().split("").reverse().map((element) => {
+    if (i == 1) {
+      i++;
+      if (element == 1) return 'I';
+      else if (element == 2) return 'II';
+      else if (element == 3) return 'III';
+      else if (element == 4) return 'IV';
+      else if (element == 5) return 'V';
+      else if (element == 6) return 'VI';
+      else if (element == 7) return 'VII';
+      else if (element == 8) return 'VIII';
+      else if (element == 9) return 'IX';
+    }
+    else if (i == 2) {
+      i++;
+      if (element == 1) return 'X';
+      else if (element == 2) return 'XX';
+      else if (element == 3) return 'XXX';
+      else if (element == 4) return 'XL';
+      else if (element == 5) return 'L';
+      else if (element == 6) return 'LX';
+      else if (element == 7) return 'LXX';
+      else if (element == 8) return 'LXXX';
+      else if (element == 9) return 'XC';
+    }
+    else if (i == 3) {
+      i++;
+      if (element == 1) return 'C';
+      else if (element == 2) return 'CC';
+      else if (element == 3) return 'CCC';
+      else if (element == 4) return 'CD';
+      else if (element == 5) return 'D';
+      else if (element == 6) return 'DC';
+      else if (element == 7) return 'DCC';
+      else if (element == 8) return 'DCCC';
+      else if (element == 9) return 'CM';
+    }
+    else if (i == 4) {
+      i++;
+      if (element == 1) return 'M';
+      else if (element == 2) return 'MM';
+      else if (element == 3) return 'MMM';
+    }
+    }
+  ).reverse().join("");
+}

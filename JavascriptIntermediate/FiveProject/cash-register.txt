@@ -1,0 +1,86 @@
+// Cash Register
+function checkCashRegister(price, cash, cid) {
+  let ccid = JSON.parse(JSON.stringify(cid));;
+  let cashInDrawer = 0;
+  let change = cash - price;
+
+  //Get the Sum of Cash in Drawer
+  for (let i = 0; i <= cid.length - 1; i++) {
+    cashInDrawer += cid[i][1];
+  }
+  cashInDrawer = cashInDrawer.toFixed(2);
+  // change = change.toFixed(2);
+
+  //Status of Cash in Drawer
+  if (cashInDrawer < change) {
+    console.log(cashInDrawer);
+    return {status: "INSUFFICIENT_FUNDS", change: []};
+  } else if (cashInDrawer == change) {
+    return {status: "CLOSED", change: cid};
+  } else {
+    for (; change > 0;) {
+      if (cid[8][1] >= 100 && change - 100 >= 0) { //Check if there is 100  cash in
+        change -= 100;              //cid and if the change is greater than 100
+        cid[8][1] -= 100;
+        // change = change.toFixed(2);
+      } else if (cid[7][1] >= 20 && change - 20 >= 0) {
+        change -= 20;
+        cid[7][1] -= 20;
+        // change = change.toFixed(2);
+        console.log(change);
+      }  else if (cid[6][1] >= 10 && change - 10 >= 0) {
+        change -= 10;
+        cid[6][1] -= 10;
+        // change = change.toFixed(2);
+        console.log(change);
+      }  else if (cid[5][1] >= 5 && change - 5 >= 0) {
+        change -= 5;
+        cid[5][1] -= 5;
+        // change = change.toFixed(2);
+        console.log(change);
+      }  else if (cid[4][1] >= 1 && change - 1 >= 0) {
+        change -= 1;
+        cid[4][1] -= 1;
+        // change = change.toFixed(2);
+        console.log(change);
+      }  else if (cid[3][1] >= 0.25 && change - 0.25 >= 0) {
+        change -= 0.25;
+        cid[3][1] -= 0.25;
+        change = change.toFixed(2);
+        cid[3][1] = cid[3][1].toFixed(2);
+        console.log(change);
+      }  else if (cid[2][1] >= 0.1 && change - 0.1 >= 0) {
+        change -= 0.1;
+        cid[2][1] -= 0.1;
+        change = change.toFixed(2);
+        cid[2][1] = cid[2][1].toFixed(1);
+        console.log(change);
+      }  else if (cid[1][1] >= 0.05 && change - 0.05 >= 0) {
+        change -= 0.05;
+        cid[1][1] -= 0.05;
+        change = change.toFixed(2);
+        cid[1][1] = cid[1][1].toFixed(2);
+        console.log(change);
+      }  else if (cid[0][1] >= 0.01 && change - 0.01 >= 0) {
+        change -= 0.01;
+        cid[0][1] -= 0.01;
+        change = change.toFixed(2);
+        cid[0][1] = cid[0][1].toFixed(2);
+        console.log(change);
+      } else {
+        return {status: "INSUFFICIENT_FUNDS", change: []};
+      }
+    }
+  }
+
+  ccid = ccid.map((elem, index) => [elem[0], elem[1] - cid[index][1]])
+             .filter((elem) => elem[1] != 0)
+             .map((elem) => {
+              if (elem[1].toString().length > 6) {
+                return  [elem[0], parseFloat(elem[1].toFixed(2))];
+              } else return [elem[0], elem[1]];
+             })
+
+  ccid = ccid.reverse();
+  return {status: "OPEN", change: ccid};
+}

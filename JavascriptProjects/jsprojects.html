@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>JS Projects</title>
+  <title>Javascript Projects</title>
   <script src="index.js" defer></script>
   <script src="jsprojects.js" defer></script>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <div id="result"></div>
-  <p id="numberOfClick">Number of Click:</p>
+  <p id="numberOfClick"></p>
 
   <button onclick="clickCounter()">Click Me</button>
-  <button onclick="restartCounter()" disabled=true>Restart Counter</button>
-  <button onclick="showClickedData()" disabled=true>Show Data</button>
+  <button onclick="startCounter()" id="hiddenButton">Start Counter</button>
+  <button onclick="showClickedData()" id="hiddenButton">Show Data</button>
   <br /><br />
 
   <script>
@@ -62,6 +62,13 @@
           value=555-555-5555></label>
   <button onclick="telephoneCheck()">Check Number</button>
   <p>This Number is a US Number: <span id = "numberConfirmation"></span></p>
+
+  <h1>Cash Register</h1>
+  <label for="telNumber">
+  <input id="telNumber" type="text" name="telNumber"
+          value=555-555-5555></label>
+  <button onclick="telephoneCheck()">Check Number</button>
+  <p>Your change: <span id = "numberConfirmation"></span></p>
 </body>
 </html>
 

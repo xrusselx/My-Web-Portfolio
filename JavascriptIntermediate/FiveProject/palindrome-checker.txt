@@ -1,0 +1,24 @@
+function palindrome(str) {
+  // let val = document.getElementById('givenString').value;
+  let palindromeVal = "";
+  // let ans = document.getElementById('palindromeAnswer');
+
+  str = str.toLowerCase().split("")
+  .filter((elem) => (/^[0-9a-zA-Z]+$/.test(elem)))
+  .join("");
+  palindromeVal = str.split("")
+  .reverse().join("");
+  if (str != "" && str == palindromeVal) {
+    console.log(true);
+    // ans.innerHTML = "The String is a Palindrome.";
+    return true;
+  } else {
+    console.log(false);
+    // ans.innerHTML = "The String is NOT a Palindrome.";
+    return false;
+  }
+}
+
+
+
+console.log(palindrome("eye"));

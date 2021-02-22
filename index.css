@@ -78,6 +78,10 @@ a{
   align-items: center;
 }
 
+#projects button {
+  cursor: pointer;
+}
+
 #projects h1 {
   font-size: 40px;
 }

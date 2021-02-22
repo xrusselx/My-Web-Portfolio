@@ -1,0 +1,21 @@
+function rot13(str) {
+  // str =  document.getElementById('encodedString').value;
+  // let decodedString = document.getElementById('decodedString');
+  let i = 1;
+  let letterMeaning = {A: 'N', B: 'O', C: 'P', D: 'Q', E: 'R', F: 'S', G: 'T',
+        H: 'U', I: 'V', J: 'W', K: 'X', L: 'Y', M: 'Z', N: 'A', O: 'B', P: 'C',
+        Q: 'D', R: 'E', S: 'F', T: 'G', U: 'H', V: 'I', W: 'J', X: 'K', Y: 'L',
+        Z: 'M'};
+
+  // decodedString.innerHTML = 
+  return str.split('').map(element => {
+    if (/\d/.test(element)) return;
+    else if (/\W/.test(element)) return element;
+    element = element.toUpperCase();
+    return letterMeaning[element]; 
+  })
+  .join('')
+  // return decodedString.innerHTML;
+}
+
+console.log(rot13("SERR PBQR PNZC"));
